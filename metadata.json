@@ -1,0 +1,7 @@
+{
+  "name": "appweb_studio-ia",
+  "description": "Sistema operacional PWA para gestão de estoque, separação e conferência da DY Auto Parts.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

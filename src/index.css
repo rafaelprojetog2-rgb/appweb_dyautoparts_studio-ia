@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-dy-accent: #F87171; /* Red-400 (Lighter than logo red) */
+  --color-dy-success: #10B981; /* Emerald-500 */
+  --color-dy-blue: #3B82F6; /* Blue-500 */
+  --color-dy-black: #000000; /* Black Background */
+  --color-dy-graphite: #111111; /* Dark Card Background */
+  --color-dy-gray-dark: #222222; /* Dark Borders */
+  --color-dy-gray-mid: #666666; /* Muted Text */
+  --color-dy-gray-light: #AAAAAA; /* Secondary Text */
+  --color-dy-white: #FFFFFF; /* Main Text */
+  --color-dy-danger-light: #FEE2E2; /* Light Red/Pink for Divergences */
+  --color-dy-danger: #EF4444; /* Red for Errors */
+  
+  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-dy-black text-dy-white font-mono antialiased;
+  }
+}
+
+@layer components {
+  .dy-card {
+    @apply bg-dy-graphite border border-dy-gray-dark rounded-xl p-5 shadow-sm transition-all duration-300;
+  }
+  
+  .dy-card-hover {
+    @apply hover:border-dy-accent/50 hover:translate-y-[-4px] hover:shadow-lg hover:shadow-dy-accent/5;
+  }
+
+  .btn-dy-primary {
+    @apply bg-dy-accent text-dy-black py-3 px-6 rounded-lg font-bold uppercase tracking-wider active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-dy-accent/20 hover:opacity-90;
+  }
+
+  .btn-dy-outline {
+    @apply border border-dy-gray-mid text-dy-white py-3 px-6 rounded-lg font-bold uppercase tracking-wider active:scale-95 transition-all flex items-center justify-center gap-2 hover:bg-dy-gray-dark;
+  }
+
+  .input-dy {
+    @apply bg-dy-graphite border border-dy-gray-mid rounded-lg px-4 py-3 text-dy-white focus:outline-none focus:border-dy-accent transition-colors;
+  }
+
+  .badge-dy {
+    @apply px-2 py-1 rounded text-[10px] font-bold uppercase tracking-tighter;
+  }
+}
